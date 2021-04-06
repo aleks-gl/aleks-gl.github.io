@@ -47,7 +47,8 @@ offered in the documentation for this product:
    Linux server running on a virtual machine.
 2. ___Installing Apache Airflow as Docker image.___ In this case we have scalable system with other advantages of 
    virtualization. Also this version of deployment can used in many types of computers such as dedicated servers 
-   and cloud architecture.
+   and cloud architecture.  
+   
 ###   Security politics and rules
 Because security configuration should be carried out on the precise recommendations built on  company's security policy,
 so in this manual, we will clarify only the main aspects that should be important to deployment process. 
@@ -59,6 +60,7 @@ adjust security also available in Apache Airflow.
 2. ___Users___ – some peoples that have acess rights for start or stop tasks and view process status
 3. ___Viewer___ – those role means only visual control of process status
    and we can limit all access rights for others (___Public___).  
+   
 _Practical tips:_  
  Entry point for define security configuration is file *airflow.cfg* in home directory.  
  Specification of access rules is defined in *airflow/www/security.py*. 
@@ -77,6 +79,7 @@ _Practical tips:_
    + SQLite can used in area for development and tests.  
    _kubernetes_ — we can use any of the versions recommended for Apache Airflow and available 
      within the target infrastructure.  
+     
    MySQL DBMS version is not implied, both due to limitations for creating parallel executors and limitations
      that will allowed in process of creating a custom image for Docker.
    ### Apache Airflow deployment types
@@ -97,6 +100,7 @@ in configuration files and it should be fixed in installation scripts.
 
 _Practical tips:_  
 Entry point for define configuration it is file airflow.cfg in home directory.  
+
 ## Deployment Apache Airflow
 ### Basic sequence of actions
 Apache Airflow installation process for all deployment styles should contain standard steps like installation process 
